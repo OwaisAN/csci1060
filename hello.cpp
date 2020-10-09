@@ -2,14 +2,33 @@
 
 using namespace std;
 
-int main()
-{
-    int a = 4;
-    int b = 9;
-    int age = b - a;
+int sortNums(int nums[], int sizes);
 
-    cout << age << endl;
+int main() {
+   int a[];
+   int b = 5;
+
+   sortNums(a, b) 
+   
+    
+
+    
+  
+    
+  
+
 
     return 0;
 }
-//end file
+
+int sortNums(int nums[sizes], int sizes) {
+  int nums[sizes];
+  cout <<"Enter " << sizes <<" integers";
+  for (int i = 0; i < sizes; i++)
+  {
+    cin >> nums[i];
+  }
+  
+  
+  return 0;
+}
