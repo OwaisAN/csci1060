@@ -7,17 +7,17 @@
 #include <cstdlib>
 
 using namespace std;
-typedef string* ArrayPtr;
+typedef string* StrArrayPtr;
 const int SIZE = 3;
 
-void displayBoard(ArrayPtr *b);
+void displayBoard(StrArrayPtr *b);
 bool userFirst();
 bool currentPlayerWon(string b[][SIZE], string symbol);
 
 int main() {
   //Create a 2D array by first creating an array of int pointers
   //and then creating an array of ints for each of the int pointers
-  ArrayPtr *board = new ArrayPtr[5];
+  StrArrayPtr *board = new StrArrayPtr[SIZE];
   //above without typedef => int **p1 = new int*[5];
 
   for (int i = 0; i < SIZE; i++) {
@@ -131,7 +131,7 @@ int main() {
   return 0;
 }
 
-void displayBoard(ArrayPtr *b) {
+void displayBoard(StrArrayPtr *b) {
   cout << "Tic-tac-toe board:" << endl << endl;
   for (int i=0; i< SIZE; i++) {
     for (int j=0; j < SIZE; j++) {
