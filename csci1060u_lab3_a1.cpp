@@ -1,12 +1,20 @@
 #include <iostream>
 
+
 using namespace std;
 
 int sortNums(int nums[], int sizes);
+int swapper(int& a, int& b);
 
-int main() {
-    int num[] = {60,40,30,20,50,10};
-    int size = sizeof(num)/sizeof(num[0]);
+int main() { 
+    int size = 5;
+    int num[size];
+    cout <<"Enter " << size <<" integers: " << endl;
+    
+    for (int i = 0; i < size; i++)
+    {
+        cin >> num[i];
+    }
 
     //array before function
     cout << "before:" << endl;
@@ -27,33 +35,32 @@ int main() {
     cout  << endl;
   
 
-
     return 0;
 }
 
 int sortNums(int nums[], int sizes) {
     //function
-  for (int index = 1; index < sizes; index++)
+  for (int i = 0; i < sizes; i++)
   {
-    int value = nums[index];
-    int i = index - 1;
-
-    while (i >= 0)
-    {
-      if (value < nums[i])
+      for (int j = 0; j < sizes; j++)
       {
-        nums[i+1] = nums[i];
-        nums[i] = value;
-        i = i-1;
-      }
-      else
-      {
-        break;
+          if (nums[j] > nums[i])
+          {
+              swapper(nums[j], nums[i]);
+          }
+          
       }
       
-      
-    }
-    
   }
   return 0;
 }
+
+int swapper(int& a, int& b) {
+  int z;
+  z = a;
+  a = b;
+  b = z;
+
+  return 0;
+}
+

@@ -8,7 +8,7 @@ int main() {
    int a[];
    int b = 5;
 
-   sortNums(a, b) 
+   sortNums(a, b) ;
    
     
 

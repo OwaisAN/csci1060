@@ -1,0 +1,10 @@
+strawberry
+kiwi
+pare
+banana
+apple
+five
+four
+three
+two
+one

@@ -18,10 +18,10 @@ int main() {
   //ofstream myOutput; //similar to cout but for files
   //myOutput.open(filename);
   //the above two lines are same as the next line
-  ofstream myOutput(filename);
-
+  ofstream myOutput(filename, ios::app); //to open a file to append text to  end of file
+                              //instead of write over file use ios::app
   //get words to write to file
-  cout << "Enter " << SIZE << " words to store in reverse order (in file "
+  cout << "Enter " << SIZE << " words to store in reverse order (in file"
        << filename << "):";
   for (int i = 0; i < SIZE; i++) {
       cin >> data[i];
